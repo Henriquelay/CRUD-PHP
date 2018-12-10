@@ -1,0 +1,37 @@
+body{
+    font-family: 'Hack';
+    text-align: center;
+}
+
+#blocoprincipal{
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    width: 40vw;
+}
+
+[name="estrelinha"]{
+    margin: 0 0 0 0;
+    text-align: left;
+    width: 10vw;
+}
+
+#blocoprincipal input{
+    width: 50%;
+}
+
+td{
+    width: 40vw;
+}
+
+[type="submit"], [type="reset"]{
+    margin: 0 0 0 0;
+    width: 20vw;
+
+}
+
+input:focus{
+    background-color: burlywood;
+}

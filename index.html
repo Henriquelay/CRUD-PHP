@@ -6,26 +6,43 @@
     <script src="crud.php"></script>
 </head>
 <body>
-    <div>
-        <span>
-            CRUD LINDAO
-        </span>
-        <form action="crud.js" method="POST">
-            <input type="text" name="nome" label="Nome" placeholder="Nome"></br>
-            <input type="number" name="matricula" label="Matrícula" placeholder="Matrícula"></br>
-            <input type="date" name="nascimento" label="Nascimento" placeholder="Nascimento    (dd/mm/aaaa)"></br>
-            <input type="email" name="email"label="Email" placeholder="Email"></br>
-            <input type="number" name="CPF" label="CPF" placeholder="CPF"></br>
-            <input type="number" name="celular" label="Celular" placeholder="(DDD) Celular"></br>
-            <input type="radio" name="estrelinha" label="estrelinha" value=1>Estrelinha</br>
-            <input type="radio" name="estrelinha" label="naoestrelinha"value=0 id="naoestrelinha">Não estrelinha</br>
-            <div>
+    <div id="blocoprincipal">
+        CRUD LINDAO
+        <table>
+            <tr><td>
+                <form action="db.php" method="POST"> 
+            </td></tr>
+            <tr><td>
+                <input type="text" name="nome" label="Nome" placeholder="Nome">
+            </td></tr>
+            <tr><td>
+                <input type="number" name="matricula" label="Matrícula" placeholder="Matrícula">
+            </td></tr>
+            <tr><td>
+                <input type="date" id="data" name="nascimento" label="Nascimento" placeholder="Nascimento    (dd/mm/aaaa)">
+            </td></tr>
+            <tr><td>
+                <input type="email" name="email"label="Email" placeholder="Email">
+            </td></tr>
+            <tr><td>
+                <input type="number" name="CPF" label="CPF" placeholder="CPF">
+            </td></tr>
+            <tr><td>
+                <input type="number" name="celular" label="Celular" placeholder="(DDD) Celular">
+            </td></tr>
+            <tr><td>
+                <input type="radio" name="estrelinha" label="estrelinha" value=1>Estrelinha
+            </td></tr>
+            <tr><td>
+                <input type="radio" name="estrelinha" label="naoestrelinha"value=0 id="naoestrelinha">Não estrelinha</li>
+            </td></tr>
+            <tr><td>
                 <input type="submit">
                 <input type="reset">
-            </div>
+            </td></tr>
         </form>
+    </table>
     </div>
-    <p id="frown">teste</p>
     <footer>
         <p>Criado por: Henrique Coutinho Layber</p>
         <p>Contact information: <a href="mailto:henriquelayber@gmail.com">
