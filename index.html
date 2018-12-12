@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CRUD PHP - Henriquelay</title>
+    <?php include 'crud.php';?>
     <link rel="stylesheet" type = "text/css" href="index.css">
     <script src="crud.php"></script>
 </head>
@@ -10,7 +11,7 @@
         CRUD LINDAO
         <table>
             <tr><td>
-                <form action="db.php" method="POST"> 
+                <form action="crud.php" method="post"> 
             </td></tr>
             <tr><td>
                 <input type="text" name="nome" label="Nome" placeholder="Nome">
@@ -22,7 +23,7 @@
                 <input type="date" id="data" name="nascimento" label="Nascimento" placeholder="Nascimento    (dd/mm/aaaa)">
             </td></tr>
             <tr><td>
-                <input type="email" name="email"label="Email" placeholder="Email">
+                <input type="email" name="email" label="Email" placeholder="Email">
             </td></tr>
             <tr><td>
                 <input type="number" name="CPF" label="CPF" placeholder="CPF">
@@ -31,10 +32,10 @@
                 <input type="number" name="celular" label="Celular" placeholder="(DDD) Celular">
             </td></tr>
             <tr><td>
-                <input type="radio" name="estrelinha" label="estrelinha" value=1>Estrelinha
+                <input type="radio" name="estrelinha" label="estrelinha" value=1><p>Estrelinha</p>
             </td></tr>
             <tr><td>
-                <input type="radio" name="estrelinha" label="naoestrelinha"value=0 id="naoestrelinha">Não estrelinha</li>
+                <input type="radio" name="estrelinha" label="naoestrelinha" value=0 id="naoestrelinha"><p>Não estrelinha</p>
             </td></tr>
             <tr><td>
                 <input type="submit">
@@ -45,7 +46,5 @@
     </div>
     <footer>
         <p>Criado por: Henrique Coutinho Layber</p>
-        <p>Contact information: <a href="mailto:henriquelayber@gmail.com">
-        henriquelayber@gmail.com</a></p>
     </footer>
 </body>
