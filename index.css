@@ -22,6 +22,10 @@ body{
     width: 50%;
 }
 
+#db{
+    border-color: black;
+}
+
 td{
     width: 40vw;
 }
