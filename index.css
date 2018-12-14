@@ -15,7 +15,7 @@ body{
 [name="estrelinha"]{
     margin: 0 0 0 0;
     text-align: left;
-    width: 10vw;
+    width: 2vw;
 }
 
 #blocoprincipal input{
@@ -32,7 +32,7 @@ td{
 
 [type="submit"], [type="reset"]{
     margin: 0 0 0 0;
-    width: 20vw;
+    width: 5vw;
 
 }
 

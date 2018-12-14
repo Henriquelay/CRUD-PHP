@@ -25,7 +25,7 @@ class Aluno {
     function setCelular($new){$this->celular = $new;}
     function setEstrelinha($new){$this->estrelinha = $new;}
 
-    function Aluno($newnome, $newmatricula, $newnascimento, $newemail, $newCPF, $newcelular, $newestrelinha){
+    function __construct($newnome, $newmatricula, $newnascimento, $newemail, $newCPF, $newcelular, $newestrelinha){
         $this->setNome($newnome);
         $this->setMatricula($newmatricula);
         $this->setNascimento($newnascimento);
@@ -35,7 +35,6 @@ class Aluno {
         $this->setestrelinha($newestrelinha);
     }
 
-    function printaAluno(){echo "Aluno: ". $this->nome . "</br>Matrícula :" . $this->matricula . "</br>Nascimento" . $this->nascimento . "</br>Email :" . $this->email . "</br>CPF :" . $this->CPF . "</br>Celular :" . $this->celular . "</br>Estrelinha :" . $this->estrelinha . "</br>";}
 }
 
 ?>
