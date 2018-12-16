@@ -1,13 +1,13 @@
 <?php 
 
 class Aluno {                                           // declara os atributos da classe
-    public $nome;
-    public $matricula;
-    public $nascimento;
-    public $email;
-    public $CPF;
-    public $celular;
-    public $estrelinha;
+    protected $nome;
+    protected $matricula;
+    protected $nascimento;
+    protected $email;
+    protected $CPF;
+    protected $celular;
+    protected $estrelinha;
 
     function __getAluno($atributo){                     // magic getter
         return $this->$atributo
