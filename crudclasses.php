@@ -45,10 +45,10 @@ class Aluno {                                           // declara os atributos 
                 break;
     
             default:
-                echo "Algo de errado nao esta certo. " . $atributo . " nao existe!<br/>";
+                echo "Algo de errado nao esta certo. " . $atributo . " nao existe!</br>";
         }
         
-        echo $atributo . " configurado para " . $valor . "<br/>";        
+        echo $atributo . " configurado para " . $valor . "</br>";        
     }
 
     function __construct($novonome, $novomatricula, $novonascimento, $novoemail, $novoCPF, $novocelular, $novoestrelinha){
@@ -64,6 +64,10 @@ class Aluno {                                           // declara os atributos 
 
     public function __destruct(){
         echo $this->name . "foi destruido.";
+    }
+
+    function __toString(){
+            return "Nome: " . this->nome . "</br>Matricula: " . $this->matricula . "</br>Nascimento: " . $this->nascimento . "</br>Email: " . $this->email . "</br>CPF: " . $this->CPF . "</br>Celular: " . $this->celular . "</br>Estrelinha: " . this->estrelinha . "</br>";
     }
 
 }
