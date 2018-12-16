@@ -1,6 +1,6 @@
 <?php 
 
-class Aluno {
+class Aluno {                                           // declara os atributos da classe
     public $nome;
     public $matricula;
     public $nascimento;
@@ -9,30 +9,61 @@ class Aluno {
     public $celular;
     public $estrelinha;
 
-    function getNome(){return $this->nome;}
-    function getMatricula(){return $this->matricula;}
-    function getNascimento(){return $this->nascimento;}
-    function getEmail(){return $this->email;}
-    function getCPF(){return $this->CPF;}
-    function getCelular(){return $this->celular;}
-    function getEstrelinha(){return $this->estrelinha;}
+    function __getAluno($atributo){                     // magic getter
+        return $this->$atributo
+    }
 
-    function setNome($new){$this->nome = $new;}
-    function setMatricula($new){$this->matricula = $new;}
-    function setNascimento($new){$this->nascimento = $new;}
-    function setEmail($new){$this->email = $new;}
-    function setCPF($new){$this->CPF = $new;}
-    function setCelular($new){$this->celular = $new;}
-    function setEstrelinha($new){$this->estrelinha = $new;}
+    function __setAluno($atributo, $valor){             // magic setter (com verificacao de entrada simples)
+        switch($atributo){
 
-    function __construct($newnome, $newmatricula, $newnascimento, $newemail, $newCPF, $newcelular, $newestrelinha){
-        $this->setNome($newnome);
-        $this->setMatricula($newmatricula);
-        $this->setNascimento($newnascimento);
-        $this->setEmail($newemail);
-        $this->setCPF($newCPF);
-        $this->setcelular($newcelular);
-        $this->setestrelinha($newestrelinha);
+            case "nome":
+                $this->nome = $valor;
+                break;
+
+            case "matricula":
+                $this->matricula = $valor;
+                break;
+
+            case "nascimento":
+                $this->nascimento = $valor;
+                break;
+
+            case "email":
+                $this->email = $valor;
+                break;
+
+            case "CPF":
+                $this->CPF = $valor;
+                break;
+
+            case "celular":
+                $this->celular = $valor;
+                break;
+
+            case "estrelinha":
+                $this->estrelinha = $valor;
+                break;
+    
+            default:
+                echo "Algo de errado nao esta certo. " . $atributo . " nao existe!<br/>";
+        }
+        
+        echo $atributo . " configurado para " . $valor . "<br/>";        
+    }
+
+    function __construct($novonome, $novomatricula, $novonascimento, $novoemail, $novoCPF, $novocelular, $novoestrelinha){
+        // magic constructor
+        $this->__setAluno(nome, $novonome);
+        $this->__setAluno(matricula, $novomatricula);
+        $this->__setAluno(nascimento, $novonascimento);
+        $this->__setAluno(email, $novoemail);
+        $this->__setAluno(CPF, $novoCPF);
+        $this->__setAluno(celular, $novocelular);
+        $this->__setAluno(estrelinha, $novoestrelinha);
+    }
+
+    public function __destruct(){
+        echo $this->name . "foi destruido.";
     }
 
 }
