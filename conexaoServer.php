@@ -1,19 +1,30 @@
 <?php
 
 class Conexao{
-    private $servidor = "localhost";
-    private $usuario = "hclayber";
-    private $senha = "preguicarolica";
-    private $tabela = "usuariosLab";
+    private $servidor;
+    private $usuario;
+    private $senha;
+    private $database;
 
     //  Variavel de conexao
-    private $conexao = new mysqli($servidor, $usuario, $senha, $tabela);
+    protected function criaConexao(){
+        $this->$servidor = "locahost";
+        $this->$usuario = "hclayber";
+        $this->$senha = "preguicarolica";
+        $this->$tabela = "crudphp_hclayber";
+
+        $conexao = new mysqli($this->$servidor, $this->$usuario, $this->$senha, $this->$tabela);
+
+        if($conexao->connect_error){
+            die("Conexão falhou: </br>" . $conexao->connect_error);
+        }else{
+            echo "Conectado ao banco de dados</br>";
+        }
+
+        return $conexao;
+    }
+
+    
 
 }
-// Checa se a conexao funcionou
-if ($conn->connect_error){
-    die("Conexão falhou: </br>" . $conn->connect_error);
-} 
-echo "Conectado ao banco de dados</br>";
-
 ?>

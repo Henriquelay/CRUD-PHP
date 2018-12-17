@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
+
     <?php
+
     include 'conexaoServer.php';
     include 'leServer.php';
-    include 'displayUsuario.php'
+    include 'displayUsuario.php';
+
     ?>
     <title>CRUD PHP - Henriquelay</title>
     <link rel="stylesheet" type = "text/css" href="index.css">
@@ -47,7 +50,18 @@
 
         <div>
 
-        <p>Área de testes:</p>
+        <p>Área de testes:Usuarios:></p>
+
+
+
+        <?php
+        function lista(){
+            if(isset($_POST['submit'])){
+                $ultimoAluno = new Aluno($_POST['nome'], $_POST['matricula'], $_POST['nascimento'], $_POST['email'], $_POST['CPF'], $_POST['celular'], $_POST['estrelinha']);
+                $ultimoAluno->mostrarUsuario();
+            }
+        }
+        ?>
 
         </div>
 
@@ -58,15 +72,3 @@
     </footer>
 
 </body>
-
-
-<?php
-function mostraLista(){
-    echo "Teste de lista " . $_POST["nome"];
-}
-function lista(){
-    if(isset($_POST['submit'])){
-        mostraLista();
-    }
-}
-?>
