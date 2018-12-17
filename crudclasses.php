@@ -10,7 +10,7 @@ class Aluno {                                           // declara os atributos 
     protected $estrelinha;
 
     function __getAluno($atributo){                     // magic getter
-        return $this->$atributo
+        return $this->$atributo;
     }
 
     function __setAluno($atributo, $valor){             // magic setter (com verificacao de entrada simples)
@@ -67,7 +67,7 @@ class Aluno {                                           // declara os atributos 
     }
 
     function __toString(){
-            return "Nome: " . this->nome . "</br>Matricula: " . $this->matricula . "</br>Nascimento: " . $this->nascimento . "</br>Email: " . $this->email . "</br>CPF: " . $this->CPF . "</br>Celular: " . $this->celular . "</br>Estrelinha: " . this->estrelinha . "</br>";
+            echo ("Nome: " . $this->nome . "</br>Matricula: " . $this->matricula . "</br>Nascimento: " . $this->nascimento . "</br>Email: " . $this->email . "</br>CPF: " . $this->CPF . "</br>Celular: " . $this->celular . "</br>Estrelinha: " . $this->estrelinha . "</br>");
     }
 
 }

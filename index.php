@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <?php include 'crudclasses.php';
-
-    $servername = "localhost";
-    $username = "hclayber";
-    $password = "preguicarolica";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password);
-
-    // Check connection
-    if ($conn->connect_error){
-        die("Conexão falhou: " . $conn->connect_error);
-    } 
-    echo "Conectado ao banco de dados";
+    <?php
+    include 'conexaoServer.php';
+    include 'leServer.php';
+    include 'displayUsuario.php'
     ?>
-
     <title>CRUD PHP - Henriquelay</title>
     <link rel="stylesheet" type = "text/css" href="index.css">
 
@@ -44,7 +33,8 @@
             <tr><td>
                 <input type="number" name="celular" label="Celular" placeholder="(DDD) Celular">
             </td></tr>
-        </table><table>
+        </table>
+        <table>
             <tr><td>
             <input type="radio" name="estrelinha" label="estrelinha" value=1><p>Estrelinha</p>
                 </td><td>
@@ -55,13 +45,18 @@
                 <input type="reset">
             </form>
 
-        <table>
-            <tr><td><?php lista(); ?></td></tr>
-        </table>
+        <div>
+
+        <p>Área de testes:</p>
+
+        </div>
+
     </div>
+
     <footer>
         <p>Criado por: Henrique Coutinho Layber</p>
     </footer>
+
 </body>
 
 
