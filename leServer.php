@@ -5,18 +5,19 @@ class Informacao extends Conexao{
 
     protected function pegarUsuarios(){
         $sql = "SELECT * FROM " . $database;
-        $resposta = $this->conexao()->query($sql);
+        $request = $this->criaConexao()->query($sql);
         $numLinhas = $resposta->num_rows;
+        $linhatual = 0;
 
         if($numLinhas > 0){
-            while($linha = $resposta->fetch_assoc()){
-                $dado[] = $linha;
-            }    
+            while($linhadb = $request->fetch_assoc()){
+                $dado[$linhatual] = $linhadb;
+                echo $dado[$linhaatual];
+                $linhatual++;
+            }
             return $dado;
         }
     }
-
-
 }
 
 ?>

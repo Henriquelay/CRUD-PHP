@@ -1,19 +1,16 @@
 <?php
 
 class Conexao{
-    private $servidor;
-    private $usuario;
-    private $senha;
-    private $database;
+    private $servidor = "localhost";
+    private $usuario = "hclayber";
+    private $senha = "preguicarolica";
+    private $database = "crudphp_hclayber";
+    private $tabela = "informacoesUsuarios";
 
     //  Variavel de conexao
-    protected function criaConexao(){
-        $this->$servidor = "locahost";
-        $this->$usuario = "hclayber";
-        $this->$senha = "preguicarolica";
-        $this->$tabela = "crudphp_hclayber";
+    public function criaConexao(){
 
-        $conexao = new mysqli($this->$servidor, $this->$usuario, $this->$senha, $this->$tabela);
+        $conexao = new mysqli($this->servidor, $this->usuario, $this->senha, $this->database);
 
         if($conexao->connect_error){
             die("Conexão falhou: </br>" . $conexao->connect_error);
@@ -22,9 +19,7 @@ class Conexao{
         }
 
         return $conexao;
-    }
-
-    
+    }    
 
 }
 ?>
