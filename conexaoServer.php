@@ -1,5 +1,4 @@
 <?php
-
 class Conexao{
     private $servidor = "localhost";
     private $usuario = "hclayber";
@@ -14,8 +13,6 @@ class Conexao{
 
         if($conexao->connect_error){
             die("Conexão falhou: </br>" . $conexao->connect_error);
-        }else{
-            echo "Conectado ao banco de dados</br>";
         }
 
         return $conexao;

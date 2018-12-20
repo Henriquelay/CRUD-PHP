@@ -1,7 +1,5 @@
 <?php
-    echo 'importou caralho';
-
-class Aluno extends Informacao{                                           // declara os atributos da classe
+class Aluno extends Conexao{                                           // declara os atributos da classe
     public $matricula;
     public $nome;
     public $email;
@@ -37,16 +35,12 @@ class Aluno extends Informacao{                                           // dec
                 echo "Algo de errado nao esta certo. " . $atributo . " nao existe!</br>";
         }
         
-        echo $atributo . " configurado para " . $valor . "</br>";        
+        // echo $atributo . " configurado para " . $valor . "</br>";        
     }
 
     public function __destruct(){
-        echo $this->nome . " foi destruido.";
+        // echo $this->nome . " foi destruido.";
     }
-    
-        function __toString(){
-                echo ("Nome: " . $this->nome . "</br>Matricula: " . $this->matricula . "</br>Email: " . $this->email . "</br>CPF: " . $this->CPF . "</br>Celular: " . $this->celular . "</br>Estrelinha: " . $this->estrelinha . "</br>");
-        }
 
     function __construct($novonome, $novomatricula, $novoemail, $novoCPF, $novocelular, $novoestrelinha){
         // magic constructor
@@ -58,12 +52,6 @@ class Aluno extends Informacao{                                           // dec
         $this->__setAluno('estrelinha', $novoestrelinha);
     }
 
-    public function mostrarUsuarios(){
-        $dados = $this->pegarUsuarios();
-        for($i = 0; $i < $this->numLinhas; $i++){
-            echo $dados[$i]['nome'] . $dados[$i]['matricula'] . $dados[$i]['email'] . $dados[$i]['CPF'] . $dados[$i]['celular'] . $dados[$i]['estrelinha']  . "</br>";
-        }
-    }
 }
 
 

@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <?php
 
-    include 'conexaoServer.php';
-    include 'leServer.php';
-    include 'displayUsuario.php';
+    include_once 'conexaoServer.php';
+    include_once 'leServer.php';
+    include_once 'displayUsuario.php';
 
     ?>
     <title>CRUD PHP - Henriquelay</title>
@@ -13,9 +13,24 @@
 </head>
 <body>
     <div id="blocoprincipal">
-        CRUD LINDAO
+        <?php 
+        if(isset($_GET['cadastro'])){
+            $var = $_GET['cadastro'];
+            switch($var){
+                case 1:
+                    echo "Usuário cadastrado com sucesso.</br>";
+                    break;
+                case 0:
+                    echo "Deu ruim ao cadastrar.</br>";
+                    break;
+                default:
+                    echo "Tem algo de muito errado.</br>";
+            }
+        }
+        ?>
+        ==CADASTRO==
         <table>
-            <form action="cadastrar.php" method="post">
+            <form action="/cadastrar.php" method="post">
             <tr><td>
                 <input type="text" name="nome" label="Nome" placeholder="Nome">
             </td></tr>

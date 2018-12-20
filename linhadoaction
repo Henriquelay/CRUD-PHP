@@ -1,1 +1,0 @@
-<!-- <?php new Aluno($_POST["nome"], $_POST["matricula"], $_POST["nascimento"], $_POST["email"], $_POST["CPF"], $_POST["celular"], $_POST["estrelinha"]);$this->cadastraUsuario();?> -->
