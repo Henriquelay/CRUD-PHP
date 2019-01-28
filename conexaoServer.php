@@ -8,7 +8,6 @@ class Conexao{
 
     //  Variavel de conexao
     public function criaConexao(){
-
         $conexao = new mysqli($this->servidor, $this->usuario, $this->senha, $this->database);
 
         if($conexao->connect_error){

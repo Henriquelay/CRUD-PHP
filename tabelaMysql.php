@@ -1,4 +1,4 @@
-<?php
+    <?php
     include_once 'funcQuery.php';
     $instancia = new QueryFuncoes();
     $resposta = $instancia->selecionatodosAlunos();
